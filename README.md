@@ -19,6 +19,7 @@ Projects will be objects that contain:
     2-description
     3-due date
     4-priority of (high-magenta neutral-yellow low-cyan)
+    5-todos it contain
 They will have actions:
     1-edit
     2-delete
@@ -26,12 +27,12 @@ They will have actions:
     4-done
 
 The different modules of this project are:
-1-create todo objects from local storage
+1-create todo objects from local storage and UI
 2-create new todo objects
 3-create new project
-4-create projects from local storage
-5-actions of todos
-6-actions of projects
+4-create projects from local storage and UI
+5-UI logic
+6-main Logic
 7-main
 Each module will have a logic part and a DOM part, first will complete all the logic part.
 
@@ -48,3 +49,6 @@ Local storage will be implemented as second part. First will be without local st
 LOG:
 17 April 2025
 1 pm - created the plan
+
+18 April 2025
+12:15 am- completed the logical part, able to create todos, projects, delete them and transfer todos from one project to another. Now to work on the UI and then Local Storage.
