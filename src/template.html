@@ -6,9 +6,53 @@
     <title>Todo list app</title>
 </head>
 <body>
-    <div class="independent">1</div>
+    <header>
+        <h1>TODO LIST APP by JMT</h1>
+        <button type="button" id="makeTodo">Create a new task</button>
+        <button type="button" id="makeProject">Create a new project</button>
+    </header>
+    <div class="independent">1
+        <div class="highTodos">A</div>
+        <div class="midTodos">B</div>
+        <div class="lowTodos">C</div>
+        <div class="doneTodos">D</div>
+    </div>
     <div class="highProjects">2</div>
     <div class="midProjects">3</div>
     <div class="lowProjects">4</div>
+    <div class="doneProjects">5</div>
+    <dialog class="newTodo">
+        <form action="#" method="#">
+            <label for="newTask">Enter the task:</label>
+            <input type="text" id="newTask" required>
+            <label for="todoDescription">Enter a description if needed:</label>
+            <textarea id="todoDescription"></textarea>
+            <label for="todoDate">Enter the due date, if required:</label>
+            <input type="datetime" id="todoDate">
+            <select name="todoPriority" id="todoPriority">
+                <option value="3">High Priority</option>
+                <option value="2" selected>Normal Priority</option>
+                <option value="1">Low Priority</option>
+            </select>
+            <button type="button" id="createTodo">Create</button>
+            <button type="button" id="cancelTodo">Cancel</button>
+        </form>
+    </dialog>
+    <dialog class="newProject">
+        <form action="#" method="#">
+            <label for="newProject">Enter the project name:</label>
+            <input type="text" id="newProject" required>
+            <label for="projectDescription">Enter a description if needed:</label>
+            <textarea id="projectDescription"></textarea>
+            <label for="projectDate">Enter the due date, if required:</label>
+            <input type="datetime" id="projectDate">
+            <select name="projectPriority" id="projectPriority">
+                <option value="3">High Priority</option>
+                <option value="2" selected>Normal Priority</option>
+                <option value="1">Low Priority</option>
+            </select><button type="button" id="createProject">Create</button>
+            <button type="button" id="cancelProject">Cancel</button>
+        </form>
+    </dialog>
 </body>
 </html>

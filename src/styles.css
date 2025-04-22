@@ -1,0 +1,35 @@
+body {
+    display: flex;
+}
+.projects {
+    background-color: blueviolet;
+    
+}
+.tasks {
+    height: 250px;
+    background-color: aqua;
+    border: 2px solid black;
+}
+.highTodos {
+    
+    background-color: red;
+}
+.midTodos {
+    
+    background-color: yellow;
+}
+.lowTodos {
+    
+    background-color: green;
+}
+.doneTodos {
+    
+    background-color: blue;
+}
+.todos {
+    height: 30px;
+    overflow: hidden;
+}
+.todos:hover {
+    height: auto;
+}

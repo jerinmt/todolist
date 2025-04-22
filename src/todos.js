@@ -1,36 +1,29 @@
 class Todos {
     constructor(data) {
-        this.id = crypto.randomUUID();
         this.task = data.task;
         this.priority = data.priority;
-        this.project = data.project;
         this.description = data.description;
         this.due = data.due;
         this.done = data.done;
+        this.id = crypto.randomUUID();
     }
     
-    changeTask = function(newTask) {
+    changeTask(newTask) {
         this.task = newTask;
     }
-    changePriority = function(newPriority) {
+    changePriority(newPriority) {
         this.priority = newPriority;
     }
-    changeProject = function(newProject) {
-        this.project = newProject;
-    }
-    changeDescription = function(newDescription) {
+    changeDescription(newDescription) {
         this.description = newDescription;
     }
-    changeDue = function(newDue) {
+    changeDue(newDue) {
         this.due = newDue;
     }
-    completed = function() {
+    completed() {
         this.done = !this.done;
     }
-    showId = function() {
-        return this.id;
-    }
-    output = function() {
+    output() {
         return {task: this.task,
                 priority: this.priority,
                 project: this.project,
