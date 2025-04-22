@@ -52,3 +52,7 @@ LOG:
 
 18 April 2025
 12:15 am- completed the logical part, able to create todos, projects, delete them and transfer todos from one project to another. Now to work on the UI and then Local Storage.
+
+22 April 2025
+Implemented adding new independent tasks, new projects and tasks inside projects. Also added feature to delete them. The addition and deletion is also reflected in the UI.
+Next steps are to implement updating todos and projects. Then implement local storage. Utilise time-fn. And finally style the page.
