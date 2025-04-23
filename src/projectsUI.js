@@ -2,7 +2,6 @@ import {deleteProjects} from "./projects.js";
 import {addTodosDom} from "./todosUI.js";
 import {storeLS, centralObject} from "./data.js";
 
-
 function addProjectDom(item) {
     let container;
     if(item.done===true) {

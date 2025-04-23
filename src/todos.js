@@ -10,18 +10,9 @@ class Todos {
         this.done = data.done;
         this.id = crypto.randomUUID();
     }
-    
-    changeTask(newTask) {
-        this.task = newTask;
-    }
+
     changePriority(newPriority) {
         this.priority = newPriority;
-    }
-    changeDescription(newDescription) {
-        this.description = newDescription;
-    }
-    changeDue(newDue) {
-        this.due = newDue;
     }
     completed() {
         this.done = !this.done;

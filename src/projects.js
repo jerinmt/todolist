@@ -16,17 +16,8 @@ class Projects {
         }
     }
     
-    changeName(newName) {
-        this.name = newName;
-    }
     changePriority(newPriority) {
         this.priority = newPriority;
-    }
-    changeDescription(newDescription) {
-        this.description = newDescription;
-    }
-    changeDue(newDue) {
-        this.due = newDue;
     }
     completed() {
         this.done = !this.done;

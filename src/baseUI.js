@@ -34,12 +34,13 @@ function makeProject() {
     let priority = document.querySelector('#projectPriority').value * 1;
     let description = document.querySelector('#projectDescription').value;
     let due = document.querySelector('#projectDate').value;
+    let deadLine = due.split("T");
     let data = {
         name: title,
         priority: priority,
         list: [],
         description: description,
-        due: due,
+        due: `${deadLine[1]} | ${deadLine[0]}`,
         done: false
     };
     createProjects(data);
@@ -49,11 +50,12 @@ function makeTodo() {
     let priority = document.querySelector('#todoPriority').value * 1;
     let description = document.querySelector('#todoDescription').value;
     let due = document.querySelector('#todoDate').value;
+    let deadLine = due.split("T");
     let data = {
         task: title,
         priority: priority,
         description: description,
-        due: due,
+        due: `${deadLine[1]} | ${deadLine[0]}`,
         done: false
     };
     createTodos(data);
