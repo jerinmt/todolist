@@ -1,6 +1,8 @@
-import {Projects} from "./projects.js";
 import { Todos } from "./todos.js";
-import { addProjectDom, addTodosDom } from "./baseUI.js";
+import { Projects } from "./projects.js";
+import { addTodosDom} from "./todosUI.js";
+import { addProjectDom } from "./projectsUI.js";
+import {initialiseButtons, makeProject, makeTodo} from "./baseUI.js";
 
 const projectList = [];
 const indieTodos = [];
@@ -51,7 +53,6 @@ function deleteTodos(id) {
             }
         }
     }
-    console.log(indieTodos, projectList);
 }
 
 

@@ -3,24 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo list app</title>
+    <title>Task Manager app</title>
 </head>
 <body>
     <header>
-        <h1>TODO LIST APP by JMT</h1>
+        <h1>TASK MANAGER APP by JMT</h1>
         <button type="button" id="makeTodo">Create a new task</button>
         <button type="button" id="makeProject">Create a new project</button>
     </header>
-    <div class="independent">1
-        <div class="highTodos">A</div>
-        <div class="midTodos">B</div>
-        <div class="lowTodos">C</div>
-        <div class="doneTodos">D</div>
-    </div>
-    <div class="highProjects">2</div>
-    <div class="midProjects">3</div>
-    <div class="lowProjects">4</div>
-    <div class="doneProjects">5</div>
+    <main>
+        <div class="independent">Independent Todos
+            <div class="highTodos"></div>
+            <div class="midTodos"></div>
+            <div class="lowTodos"></div>
+            <div class="doneTodos"></div>
+        </div>
+        <div class="highProjects">High Priority Projects</div>
+        <div class="midProjects">Normal Priority Projects</div>
+        <div class="lowProjects">Low Priority Projects</div>
+        <div class="doneProjects">Completed Projects</div>
+    </main>
     <dialog class="newTodo">
         <form action="#" method="#">
             <label for="newTask">Enter the task:</label>

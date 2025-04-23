@@ -1,7 +1,9 @@
-//import { Todos } from "./todos.js";
-//import { Projects, indieTodos } from "./projects.js";
-import {createProjects, deleteProjects, createTodos, deleteTodos, projectList} from "./base.js";
-import { initialiseButtons} from "./ui.js";
+import { Todos } from "./todos.js";
+import { Projects } from "./projects.js";
+import {createProjects, deleteProjects, createTodos, deleteTodos, currentProject} from "./base.js";
+import { addTodosDom} from "./todosUI.js";
+import { addProjectDom } from "./projectsUI.js";
+import {initialiseButtons, makeProject, makeTodo} from "./baseUI.js";
 import "./styles.css";
 
 //create a todo
@@ -81,6 +83,30 @@ const td2 = {
     due: '13/2/2024',
     done: false
 };
+const project2 = {
+    name: 'sdjfsldf',
+    priority: 3,
+    list: [],
+    description: '',
+    due: '13/2/2024',
+    done: false
+};
+const project3 = {
+    name: 'sdault',
+    priority: 2,
+    list: [],
+    description: '',
+    due: '13/2/2024',
+    done: false
+};
+const project4 = {
+    name: 'd43ult',
+    priority: 0,
+    list: [],
+    description: '',
+    due: '13/2/2024',
+    done: false
+};
 
 /*
 const project2 = {
@@ -93,6 +119,9 @@ const project2 = {
 };*/
 
 createProjects(project1);
+createProjects(project2);
+createProjects(project3);
+createProjects(project4);
 createTodos(td1);
 createTodos(td2);
 //projectList[0].addTodo(todo1);
