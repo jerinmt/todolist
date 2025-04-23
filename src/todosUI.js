@@ -1,12 +1,12 @@
 import { Todos } from "./todos.js";
 import { Projects } from "./projects.js";
-import {createProjects, deleteProjects, createTodos, deleteTodos, currentProject} from "./base.js";
+import {createProjects, deleteProjects, createTodos, deleteTodos, centralObject} from "./base.js";
 import { addProjectDom } from "./projectsUI.js";
 import {initialiseButtons, makeProject, makeTodo} from "./baseUI.js";
 
 
 function addTodosDom(item, project) {
-    currentProject.name = null;
+    centralObject.current = null;
     let container;
     if(project==null) {
         container = document.querySelector('.independent');
@@ -14,14 +14,14 @@ function addTodosDom(item, project) {
     else {
         let requiredProject = document.querySelectorAll('.projects');
         for(let i=0;i<requiredProject.length;i++) {
-            let title = requiredProject[i].querySelector('h3').textContent;
-            if(title==project) {
+            let identity = requiredProject[i].dataset.uniqueID;
+            if(identity==project) {
                 container = requiredProject[i].querySelector('.tasks');
             }
         }
     }
     let prioritySet;
-    if(item.priority==0) {
+    if(item.done===true) {
         prioritySet = container.querySelector('.doneTodos');
     }
     else if(item.priority==1) {
@@ -38,7 +38,8 @@ function addTodosDom(item, project) {
     let deadLine = document.createElement('p');
     let toggle = document.createElement('button');
     let deleteThis = document.createElement('button');
-    let edit = document.createElement('button');
+    let edit1 = document.createElement('button');
+    let edit2 = document.createElement('button');
     let description = document.createElement('p');
     task.textContent = item.task;
     deadLine.textContent = item.due;
@@ -48,7 +49,30 @@ function addTodosDom(item, project) {
     else {
         toggle.textContent = 'Done';
     }
-    edit.textContent = 'Edit task';
+    toggle.addEventListener('click',(Event)=>{
+        let parent = Event.target.parentNode;
+        item.done = !item.done;
+        parent.remove();
+        addTodosDom(item, project);
+    });
+    edit1.textContent = 'Priority +';
+    edit1.addEventListener('click',(Event)=>{
+        let parent = Event.target.parentNode;
+        if((item.priority==1)||(item.priority==2)) {
+            item.priority++;
+        }
+        parent.remove();
+        addTodosDom(item, project);
+    });
+    edit2.textContent = 'Priority -';
+    edit2.addEventListener('click',(Event)=>{
+        let parent = Event.target.parentNode;
+        if((item.priority==3)||(item.priority==2)) {
+            item.priority--;
+        }
+        parent.remove();
+        addTodosDom(item, project);
+    });
     deleteThis.textContent = 'Delete task';
     deleteThis.addEventListener('click',(Event)=>{
         deleteTodos(item.id);
@@ -62,9 +86,11 @@ function addTodosDom(item, project) {
     card.appendChild(task);
     card.appendChild(deadLine);
     card.appendChild(description);
-    card.appendChild(edit);
-    card.appendChild(deleteThis);
     card.appendChild(toggle);
+    card.appendChild(deleteThis);
+    card.appendChild(edit1);
+    card.appendChild(edit2);
+    
 }
 
 export {addTodosDom};

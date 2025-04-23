@@ -31,13 +31,15 @@
             <textarea id="todoDescription"></textarea>
             <label for="todoDate">Enter the due date, if required:</label>
             <input type="datetime" id="todoDate">
-            <select name="todoPriority" id="todoPriority">
-                <option value="3">High Priority</option>
-                <option value="2" selected>Normal Priority</option>
-                <option value="1">Low Priority</option>
-            </select>
-            <button type="button" id="createTodo">Create</button>
-            <button type="button" id="cancelTodo">Cancel</button>
+            <div>
+                <select name="todoPriority" id="todoPriority">
+                    <option value="3">High Priority</option>
+                    <option value="2" selected>Normal Priority</option>
+                    <option value="1">Low Priority</option>
+                </select>
+                <button type="button" id="createTodo">Create</button>
+                <button type="button" id="cancelTodo">Cancel</button>
+            </div>
         </form>
     </dialog>
     <dialog class="newProject">
@@ -48,12 +50,15 @@
             <textarea id="projectDescription"></textarea>
             <label for="projectDate">Enter the due date, if required:</label>
             <input type="datetime" id="projectDate">
-            <select name="projectPriority" id="projectPriority">
-                <option value="3">High Priority</option>
-                <option value="2" selected>Normal Priority</option>
-                <option value="1">Low Priority</option>
-            </select><button type="button" id="createProject">Create</button>
-            <button type="button" id="cancelProject">Cancel</button>
+            <div>    
+                <select name="projectPriority" id="projectPriority">
+                    <option value="3">High Priority</option>
+                    <option value="2" selected>Normal Priority</option>
+                    <option value="1">Low Priority</option>
+                </select>
+                <button type="button" id="createProject">Create</button>
+                <button type="button" id="cancelProject">Cancel</button>
+            </div>
         </form>
     </dialog>
 </body>

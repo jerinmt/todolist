@@ -14,7 +14,7 @@ header {
 main {
     display: flex;
     background-color: gray;
-    gap: 1%;
+    gap: 3px;
     flex-wrap: wrap;
     min-height: 85vh;
     padding: 1%;
@@ -122,6 +122,7 @@ button:hover {
 }
 
 .doneTodos {
+    margin-top: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
@@ -140,4 +141,21 @@ button:hover {
 }
 .todos:hover {
     height: auto;
+}
+
+dialog {
+    width: 30%;
+    margin: auto;
+    background-color: rgb(204, 200, 200);
+    border: 1px solid rgb(117, 116, 116);
+    border-radius: 5px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    gap:5px;
+}
+form div {
+    align-self: center;
 }

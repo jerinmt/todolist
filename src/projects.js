@@ -9,6 +9,7 @@ class Projects {
         this.due = data.due;
         this.done = data.done;
         this.list = [];
+        this.id = crypto.randomUUID();
         for(let i=0;i<data.list.length;i++) {
             this.addTodo(data.list[i]);
         }

@@ -1,6 +1,6 @@
 import { Todos } from "./todos.js";
 import { Projects } from "./projects.js";
-import {createProjects, deleteProjects, createTodos, deleteTodos, currentProject} from "./base.js";
+import {createProjects, deleteProjects, createTodos, deleteTodos, centralObject} from "./base.js";
 import { addTodosDom} from "./todosUI.js";
 import { addProjectDom } from "./projectsUI.js";
 
@@ -19,8 +19,14 @@ function initialiseButtons() {
         document.querySelector('.newProject').showModal();
     });
     document.querySelector('#createProject').addEventListener('click', ()=>{
-        makeProject();
-        document.querySelector('.newProject').close();
+        let title = document.querySelector('#newProject').value;
+        if(title=='') {
+            alert("A project needs a name!");
+        }
+        else {
+            makeProject();
+            document.querySelector('.newProject').close();
+        }
     });
     document.querySelector('#cancelProject').addEventListener('click', ()=>{
         document.querySelector('.newProject').close();

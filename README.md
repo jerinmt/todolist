@@ -47,6 +47,7 @@ Each project will contain 3 inner divs for different priorities. Inside each the
 Local storage will be implemented as second part. First will be without local storage.
 
 LOG:
+
 17 April 2025
 1 pm - created the plan
 
@@ -59,3 +60,5 @@ Next steps are to implement updating todos and projects. Then implement local st
 
 23 April 2025
 Styled the page. Next is to implement the updating feature, time-fns and local storage. Also reorganised the modules.
+Completed the updating feature, the projects and tasks can be increased and decreased priority as well as marked as done.
+Next is to implement local storage and then time-fns to show how much time is left for tasks and projects.
