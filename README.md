@@ -62,3 +62,4 @@ Next steps are to implement updating todos and projects. Then implement local st
 Styled the page. Next is to implement the updating feature, time-fns and local storage. Also reorganised the modules.
 Completed the updating feature, the projects and tasks can be increased and decreased priority as well as marked as done.
 Next is to implement local storage and then time-fns to show how much time is left for tasks and projects.
+Implemented local storage.

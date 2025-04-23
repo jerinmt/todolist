@@ -1,3 +1,6 @@
+import {storeLS, centralObject} from "./data.js";
+
+
 class Todos {
     constructor(data) {
         this.task = data.task;
@@ -33,4 +36,21 @@ class Todos {
     }
 }
 
-export {Todos};
+function deleteTodos(id) {
+    for(let i=0; i<centralObject.indieTodos.length;i++) {
+        if(centralObject.indieTodos[i].id===id) {
+            centralObject.indieTodos.splice(i,1);
+            storeLS();
+        }
+    }
+    for(let i=0;i<centralObject.projectList.length;i++) {
+        for(let j=0;j<centralObject.projectList[i].list.length;j++) {
+            if(centralObject.projectList[i].list[j].id==id) {
+                centralObject.projectList[i].list.splice(j,1);
+                storeLS();
+            }
+        }
+    }
+}
+
+export {Todos, deleteTodos};

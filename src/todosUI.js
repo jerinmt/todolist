@@ -1,8 +1,5 @@
-import { Todos } from "./todos.js";
-import { Projects } from "./projects.js";
-import {createProjects, deleteProjects, createTodos, deleteTodos, centralObject} from "./base.js";
-import { addProjectDom } from "./projectsUI.js";
-import {initialiseButtons, makeProject, makeTodo} from "./baseUI.js";
+import {deleteTodos} from "./todos.js";
+import {storeLS, centralObject} from "./data.js";
 
 
 function addTodosDom(item, project) {
@@ -52,6 +49,7 @@ function addTodosDom(item, project) {
     toggle.addEventListener('click',(Event)=>{
         let parent = Event.target.parentNode;
         item.done = !item.done;
+        storeLS();
         parent.remove();
         addTodosDom(item, project);
     });
@@ -61,6 +59,7 @@ function addTodosDom(item, project) {
         if((item.priority==1)||(item.priority==2)) {
             item.priority++;
         }
+        storeLS();
         parent.remove();
         addTodosDom(item, project);
     });
@@ -70,6 +69,7 @@ function addTodosDom(item, project) {
         if((item.priority==3)||(item.priority==2)) {
             item.priority--;
         }
+        storeLS();
         parent.remove();
         addTodosDom(item, project);
     });
