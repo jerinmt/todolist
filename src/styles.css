@@ -14,10 +14,10 @@ header {
 main {
     display: flex;
     background-color: gray;
-    gap: 3px;
+    gap: 8px; 
     flex-wrap: wrap;
     min-height: 85vh;
-    padding: 1%;
+    padding: 4px;
 }
 button {
     background-color: blue;
