@@ -1,5 +1,6 @@
 # todolist
 Making a todo list app
+Hosted at  https://jerinmt.github.io/todolist/
 
 The todos will be objects that contain:
     1-a title
